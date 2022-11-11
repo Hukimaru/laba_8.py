@@ -138,7 +138,6 @@ while not finish:
 
     snar.polet()
 
-    if snar.l[1] >= Len_y -100
 
     gun.new_p()
     pygame.display.update()

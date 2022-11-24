@@ -8,7 +8,7 @@ from random import randint
 class SNAR:
     def __init__(self, gun, screen):
         self.r = 40  # радиус снаряда
-        self.V = gun.t * 50  # зависимость скорости от времени нажатия мыши. gun.t - время пока кнопка зажата
+        self.V = gun.t * 60  # зависимость скорости от времени нажатия мыши. gun.t - время пока кнопка зажата
         self.color = YELLOW
         gun.t = 0
         self.l = ((gun.D[0] + gun.C[0]) // 2, (gun.D[1] + gun.C[1]) // 2)
@@ -29,7 +29,7 @@ class SNAR:
             self.dy = -1 * self.dy
         self.l = (self.l[0] + self.dx, self.l[1] + self.dy)
         circle(self.screen, GREEN, self.l, self.r)
-        self.dy = (self.dy + 1) * 0.99
+        self.dy = (self.dy + 1.5) * 0.99
         self.dx = self.dx * 0.97
 
 class GUN:
@@ -88,8 +88,8 @@ class TARG:
         self.l = (Len_x - 200, 200)
         self.r = 50
         self.color = RED
-        self.dx = randint(-10, 10)
-        self.dy = randint(-10, 10)
+        self.dx = randint(-20, 20)
+        self.dy = randint(-20, 20)
 
     def target(self, screen, Len_y, Len_x):
         circle(screen, BLACK, self.l, self.r)

@@ -19,7 +19,7 @@ BLACK = (0, 0, 0)
 GRAY = (150, 150, 150)
 COLORS = [RED, BLUE, YELLOW, GREEN, MAGENTA, CYAN]
 
-Len_x = 1000
+Len_x = 1300
 Len_y = 1000
 
 screen = pygame.display.set_mode((Len_x, Len_y))
